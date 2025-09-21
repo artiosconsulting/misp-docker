@@ -5,7 +5,7 @@
 
 # Configuration
 MISP_URL="https://localhost:8443"
-API_KEY="d5ZsCRSXU3V8PBdEH3nbuHpwp5OP6cvHDs2KFWE7"  # From your .env file
+API_KEY="secret_key"  # From your .env file
 ACCEPT_HEADER="application/json"
 CONTENT_TYPE="application/json"
 
@@ -24,7 +24,7 @@ echo
 echo "2. Creating an event for website analysis..."
 cat << 'EOF'
 curl -k -X POST \
-  -H "Authorization: d5ZsCRSXU3V8PBdEH3nbuHpwp5OP6cvHDs2KFWE7" \
+  -H "Authorization: secret_key" \
   -H "Accept: application/json" \
   -H "Content-Type: application/json" \
   "https://localhost:8443/events/add" \
@@ -45,7 +45,7 @@ echo
 echo "3. Adding a URL attribute for analysis..."
 cat << 'EOF'
 curl -k -X POST \
-  -H "Authorization: d5ZsCRSXU3V8PBdEH3nbuHpwp5OP6cvHDs2KFWE7" \
+  -H "Authorization: secret_key" \
   -H "Accept: application/json" \
   -H "Content-Type: application/json" \
   "https://localhost:8443/attributes/add/1" \
@@ -67,7 +67,7 @@ echo
 echo "4. Adding a domain attribute..."
 cat << 'EOF'
 curl -k -X POST \
-  -H "Authorization: d5ZsCRSXU3V8PBdEH3nbuHpwp5OP6cvHDs2KFWE7" \
+  -H "Authorization: secret_key" \
   -H "Accept: application/json" \
   -H "Content-Type: application/json" \
   "https://localhost:8443/attributes/add/1" \
@@ -89,7 +89,7 @@ echo
 echo "5. Adding an IP address attribute..."
 cat << 'EOF'
 curl -k -X POST \
-  -H "Authorization: d5ZsCRSXU3V8PBdEH3nbuHpwp5OP6cvHDs2KFWE7" \
+  -H "Authorization: secret_key" \
   -H "Accept: application/json" \
   -H "Content-Type: application/json" \
   "https://localhost:8443/attributes/add/1" \
@@ -111,7 +111,7 @@ echo
 echo "6. Searching for existing threats related to a domain..."
 cat << 'EOF'
 curl -k -X POST \
-  -H "Authorization: d5ZsCRSXU3V8PBdEH3nbuHpwp5OP6cvHDs2KFWE7" \
+  -H "Authorization: secret_key" \
   -H "Accept: application/json" \
   -H "Content-Type: application/json" \
   "https://localhost:8443/attributes/restSearch" \
@@ -129,7 +129,7 @@ echo
 echo "7. Getting recent events..."
 cat << 'EOF'
 curl -k -X GET \
-  -H "Authorization: d5ZsCRSXU3V8PBdEH3nbuHpwp5OP6cvHDs2KFWE7" \
+  -H "Authorization: secret_key" \
   -H "Accept: application/json" \
   "https://localhost:8443/events/index/limit:10"
 EOF
@@ -140,7 +140,7 @@ echo
 echo "8. Enriching a URL using MISP modules..."
 cat << 'EOF'
 curl -k -X POST \
-  -H "Authorization: d5ZsCRSXU3V8PBdEH3nbuHpwp5OP6cvHDs2KFWE7" \
+  -H "Authorization: secret_key" \
   -H "Accept: application/json" \
   -H "Content-Type: application/json" \
   "https://localhost:8443/modules/query/expansion/url" \
@@ -159,7 +159,7 @@ echo
 echo "9. Getting MISP statistics..."
 cat << 'EOF'
 curl -k -X GET \
-  -H "Authorization: d5ZsCRSXU3V8PBdEH3nbuHpwp5OP6cvHDs2KFWE7" \
+  -H "Authorization: secret_key" \
   -H "Accept: application/json" \
   "https://localhost:8443/events/stats"
 EOF
@@ -170,7 +170,7 @@ echo
 echo "10. Website reputation check (example with URLhaus module)..."
 cat << 'EOF'
 curl -k -X POST \
-  -H "Authorization: d5ZsCRSXU3V8PBdEH3nbuHpwp5OP6cvHDs2KFWE7" \
+  -H "Authorization: secret_key" \
   -H "Accept: application/json" \
   -H "Content-Type: application/json" \
   "https://localhost:8443/modules/query/expansion/url" \

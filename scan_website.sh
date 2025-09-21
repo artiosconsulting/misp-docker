@@ -12,7 +12,7 @@ fi
 
 TARGET=$1
 MISP_URL="https://localhost:8443"
-API_KEY="d5ZsCRSXU3V8PBdEH3nbuHpwp5OP6cvHDs2KFWE7"
+API_KEY="secret_key"
 
 echo "=== MISP Website Scanner ==="
 echo "Target: $TARGET"
